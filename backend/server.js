@@ -10,7 +10,7 @@ const ordersRoutes = require("./routes/orders");
 dotenv.config();
 const app = express();
 const corsOptions = {
-  origin:"https://op-x.vercel.app",
+  origin:"https://restaurent-frontend-six.vercel.app",
   credentials:true
 }
 app.use(cors(corsOptions));
