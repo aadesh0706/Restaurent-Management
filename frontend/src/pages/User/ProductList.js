@@ -12,7 +12,7 @@ function ProductList({ addToCart }) {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products");
+      const res = await axios.get("https://restaurent-backend-inky.vercel.app/api/products");
       setProducts(res.data);
     } catch (err) {
       console.error("Error fetching products:", err);

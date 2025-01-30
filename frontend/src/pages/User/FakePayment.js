@@ -23,7 +23,7 @@ function FakePayment() {
       try {
         const totalAmount = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-        await axios.post("http://localhost:5000/api/orders/create", {
+        await axios.post("https://restaurent-backend-inky.vercel.app/api/orders/create", {
           userId, // Ensure userId is sent properly
           products: cart.map((item) => ({
             productId: item._id,
