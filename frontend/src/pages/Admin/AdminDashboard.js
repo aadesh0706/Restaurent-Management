@@ -35,7 +35,7 @@ function AdminDashboard() {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products");
+      const res = await axios.get("https://restaurent-backend-inky.vercel.app/api/products");
       setProducts(res.data);
     } catch (err) {
       console.error("Error fetching products:", err);
@@ -44,7 +44,7 @@ function AdminDashboard() {
 
   // const fetchOrders = async () => {
   //   try {
-  //     const res = await axios.get("http://localhost:5000/api/orders");
+  //     const res = await axios.get("https://restaurent-backend-inky.vercel.app/api/orders");
   //     setOrders(res.data);
   //   } catch (err) {
   //     console.error("Error fetching orders:", err);
@@ -52,7 +52,7 @@ function AdminDashboard() {
   // };
   const fetchOrders = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/orders");
+      const res = await axios.get("https://restaurent-backend-inky.vercel.app/api/orders");
       console.log("Orders fetched:", res.data);  // ✅ Debugging
       setOrders(res.data);
     } catch (err) {
@@ -64,7 +64,7 @@ function AdminDashboard() {
 
   // const updateOrderStatus = async (orderId, status) => {
   //   try {
-  //     await axios.put(`http://localhost:5000/api/orders/${orderId}/status`, { status });
+  //     await axios.put(`https://restaurent-backend-inky.vercel.app/api/orders/${orderId}/status`, { status });
   //     fetchOrders(); // Refresh orders after update
   //   } catch (err) {
   //     console.error("Error updating order status:", err);
@@ -73,7 +73,7 @@ function AdminDashboard() {
 
   const updateOrderStatus = async (orderId, status) => {
     try {
-      const res = await axios.put(`http://localhost:5000/api/orders/${orderId}/status`, { status });
+      const res = await axios.put(`https://restaurent-backend-inky.vercel.app/api/orders/${orderId}/status`, { status });
   
       // ✅ Update UI immediately
       setOrders((prevOrders) =>
@@ -93,7 +93,7 @@ function AdminDashboard() {
   const handleAddProduct = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/products", newProduct);
+      const res = await axios.post("https://restaurent-backend-inky.vercel.app/api/products", newProduct);
       setProducts([...products, res.data]);
       setNewProduct({ name: "", price: "", stock: "", image: "", category: "", description: "" });
     } catch (err) {
@@ -104,7 +104,7 @@ function AdminDashboard() {
   // Handle product deletion
   const handleDeleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/products/${id}`);
+      await axios.delete(`https://restaurent-backend-inky.vercel.app/api/products/${id}`);
       setProducts(products.filter((product) => product._id !== id));
     } catch (err) {
       console.error("Error deleting product:", err);

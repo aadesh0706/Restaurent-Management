@@ -7,7 +7,7 @@ function MenuList() {
 
   useEffect(() => {
     // Fetch menu data from backend
-    axios.get("http://localhost:5000/api/menu")
+    axios.get("https://restaurent-backend-inky.vercel.app/api/menu")
       .then(response => setMenu(response.data))
       .catch(error => console.error("Error fetching menu:", error));
   }, []);

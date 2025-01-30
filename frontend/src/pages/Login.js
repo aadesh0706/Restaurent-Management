@@ -16,7 +16,7 @@ const Login = () => {
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
   //   try {
-  //     const res = await axios.post("http://localhost:5000/api/auth/login", formData);
+  //     const res = await axios.post("https://restaurent-backend-inky.vercel.app/api/auth/login", formData);
   //     localStorage.setItem("token", res.data.token);
       
   //     if (res.data.role === "admin") {
@@ -31,7 +31,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", formData);
+      const res = await axios.post("https://restaurent-backend-inky.vercel.app/api/auth/login", formData);
   
       // Store authentication details
       localStorage.setItem("token", res.data.token);
