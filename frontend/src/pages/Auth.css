@@ -1,0 +1,56 @@
+.auth-container {
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .auth-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .auth-container input, .auth-container select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .auth-container button {
+    width: 100%;
+    padding: 10px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .auth-container button:hover {
+    background: #219150;
+  }
+  
+  .auth-container .error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .auth-container p {
+    margin-top: 10px;
+  }
+  
+  .auth-container a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .auth-container a:hover {
+    text-decoration: underline;
+  }
+  
