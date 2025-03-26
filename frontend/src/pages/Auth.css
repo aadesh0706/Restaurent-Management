@@ -53,4 +53,177 @@
   .auth-container a:hover {
     text-decoration: underline;
   }
+  /* Auth Container */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%), 
+                    url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+/* Auth Form Card */
+.auth-container form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  backdrop-filter: blur(10px);
+  animation: slideIn 0.5s ease-out;
+}
+
+.auth-container h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.auth-container h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #ff6f61;
+  border-radius: 2px;
+}
+
+/* Form Elements */
+.auth-container input,
+.auth-container select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.auth-container input:focus,
+.auth-container select:focus {
+  border-color: #ff6f61;
+  box-shadow: 0 0 0 2px rgba(255, 111, 97, 0.2);
+  outline: none;
+}
+
+.auth-container select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 15px;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(255, 111, 97, 0.4);
+}
+
+.auth-container button:hover {
+  background: #ff5c4e;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 111, 97, 0.5);
+}
+
+.auth-container button:active {
+  transform: translateY(-1px);
+}
+
+/* Links */
+.auth-container p {
+  text-align: center;
+  margin-top: 25px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.auth-container a {
+  color: #ff6f61;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.auth-container a:hover {
+  color: #ff5c4e;
+  text-decoration: underline;
+}
+
+/* Error Message */
+.error {
+  background: rgba(255, 76, 76, 0.1);
+  color: #ff4c4c;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid #ff4c4c;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form Title for Login/Register */
+.form-title {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .auth-container form {
+    padding: 25px;
+  }
   
+  .auth-container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .auth-container input,
+  .auth-container select,
+  .auth-container button {
+    padding: 12px;
+  }
+}
