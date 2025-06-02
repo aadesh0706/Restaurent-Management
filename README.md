@@ -1,6 +1,8 @@
 
 ### **Restaurant Management System (MERN Stack)**  
 
+![Overview](image.png)
+
 #### **Project Overview**  
 The **Restaurant Management System** is a full-stack web application built using the **MERN stack** (**MongoDB, Express.js, React.js, and Node.js**) designed to help restaurant owners manage their business efficiently. The system provides a seamless experience for both **administrators** and **customers**, enabling restaurant management, order tracking, and a smooth customer experience.
 
